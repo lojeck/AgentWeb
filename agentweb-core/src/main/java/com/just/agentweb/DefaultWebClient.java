@@ -608,9 +608,9 @@ public class DefaultWebClient extends MiddlewareWebClientBase {
 	}
 
 	private Handler.Callback getCallback(final String url) {
-		if (this.mCallback != null) {
-			return this.mCallback;
-		}
+//		if (this.mCallback != null) {
+//			return this.mCallback;
+//		}
 		return this.mCallback = new Handler.Callback() {
 			@Override
 			public boolean handleMessage(Message msg) {
