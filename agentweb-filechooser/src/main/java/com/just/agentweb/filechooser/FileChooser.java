@@ -279,6 +279,18 @@ public class FileChooser {
             return;
         }
 
+
+        boolean captureEnabled = false;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            captureEnabled = this.mFileChooserParams.isCaptureEnabled();
+        }
+        if (captureEnabled) {
+            mCameraState = true;
+            onCameraAction();
+            return;
+        }
+
+        
         if (this.mAgentWebUIController.get() != null) {
             this.mAgentWebUIController
                     .get()
