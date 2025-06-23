@@ -80,7 +80,7 @@ public class DefaultUIController extends AbsAgentWebUIController {
 				return;
 			}
 		}
-		if (mAskOpenOtherAppDialog == null) {
+//		if (mAskOpenOtherAppDialog == null) {
 			mAskOpenOtherAppDialog = new AlertDialog
 					.Builder(mActivity)
 					.setMessage(mResources.getString(R.string.agentweb_leave_app_and_go_other_page,
@@ -103,7 +103,7 @@ public class DefaultUIController extends AbsAgentWebUIController {
 						}
 					})
 					.create();
-		}
+//		}
 		mAskOpenOtherAppDialog.show();
 	}
 
